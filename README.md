@@ -1,4 +1,4 @@
-# Minha primeira API
+# Primeiro App em React
 
 Criacao meu primeiro app em React, para consumo da api de treino (https://github.com/LeoSouza221/api-treino)
 
