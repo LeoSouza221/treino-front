@@ -1,11 +1,13 @@
 .main-header {
     width: 100vw;
     height: 70px;
-    background-color: #212529;
+    background-color: rgb(14, 30, 19);
+    box-shadow: -10px 0 5px grey;
     color: white;
     display: flex;
     align-items: center;
     position: fixed;
+    z-index: 2;
 }
 
 .main-header .header-title {
@@ -22,21 +24,40 @@
     border: solid 1px white;
     border-radius: 50%;
     padding: 12px;
+    cursor: pointer;
+}
+
+.main-header .drop-down:hover .menu-items {
+    display: block;
+    animation: teste 0.5s ease-out forwards;
+}
+
+@keyframes teste{
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }
 
 .main-header .drop-down .menu-items {
     position: absolute;
     width: 160px;
     height: 120px;
-    background-color:#2d3236;
+    background-color: rgb(14, 30, 19);
     color: white;
     left: -120px;
-    top: 50px;
+    top: 49px;
     box-shadow: 
         1px 3px 2px rgb(231, 230, 230),
         1px 0 2px;
     border-radius: 3px;
     list-style: none;
+    display: none;
+    transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .menu-items li {
@@ -44,12 +65,19 @@
     width: calc(100% - 20px);
     height: 20px;
     padding: 10px;
-    border-bottom: solid 1px white;
     cursor: pointer;
+    border-bottom: solid 1px rgb(239 180 65);
+}
+
+.menu-items li:last-child {
+    border-bottom: none;
 }
 
 .menu-items li:hover {
     transform: perspective(2);
+    background-color: rgb(48, 47, 47);
+    /* box-shadow: inset -2px -2px 2px rgb(201, 201, 201); */
+    border-radius: 0 0 5px 0;
 }
 
 .menu-items li svg {
