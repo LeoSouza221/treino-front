@@ -6,7 +6,7 @@ function Header() {
     return (
         <header className="main-header">
             <div className="header-title">
-                <h1 className="">Teste</h1>
+                <h1 className="">Bora Treinar</h1>
             </div>
             <div className="drop-down">
                 <FontAwesomeIcon icon="user" color="white" size="lg" />
