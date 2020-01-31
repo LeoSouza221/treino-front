@@ -33,14 +33,46 @@ function Header() {
                         <div className="form-infos">
                             <div id="login-form" className="form-layout">
                                 <form>
-                                    <label></label>
-                                    <input></input>
+                                    <div className="input-block login-space">
+                                        <label>Email</label>
+                                        <input value=""></input>
+                                    </div>
+                                    <div className="input-block login-space">
+                                        <label>Senha</label>
+                                        <input value=""></input>
+                                    </div>
+                                    <button type="submit">
+                                        Entrar
+                                    </button>
                                 </form>
                             </div>
                             <div id="register-form" className="form-layout">
                                 <form>
-                                    <label></label>
-                                    <input></input>
+                                    <div className="input-block register-space">
+                                        <label>Nome</label>
+                                        <input value=""></input>
+                                    </div>
+                                    <div className="input-block register-space">
+                                        <label>Email</label>
+                                        <input value=""></input>
+                                    </div>
+                                    <div className="input-group register-space">
+                                        <div className="input-block">
+                                            <label>Senha</label>
+                                            <input value=""></input>
+                                        </div>
+                                        <div className="input-block">
+                                            <label>Corfirme a senha</label>
+                                            <input value=""></input>
+                                        </div>
+                                    </div>
+                                    <div className="input-block">
+                                        <input type="radio" name="user_type" value="personal"/>Personal
+                                        <input type="radio" name="user_type" value="student"/>Aluno
+                                    </div>
+                                    <button className="register-space" type="submit">
+                                        Enviar
+                                    </button>
                                 </form>
                             </div>
                         </div>
