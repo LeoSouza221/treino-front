@@ -9,7 +9,7 @@ function Header() {
                 <div class="background-image">
                     <img 
                         className="main-image"
-                        src="https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
+                        src="https://images.unsplash.com/photo-1534258936925-c58bed479fcb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80"
                         alt=""
                     >
                     </img>
@@ -35,11 +35,11 @@ function Header() {
                                 <form>
                                     <div className="input-block login-space">
                                         <label>Email</label>
-                                        <input value=""></input>
+                                        <input value="" type="text"></input>
                                     </div>
                                     <div className="input-block login-space">
                                         <label>Senha</label>
-                                        <input value=""></input>
+                                        <input value="" type="text"></input>
                                     </div>
                                     <button type="submit">
                                         Entrar
@@ -50,33 +50,50 @@ function Header() {
                                 <form>
                                     <div className="input-block register-space">
                                         <label>Nome</label>
-                                        <input value=""></input>
+                                        <input value="" type="text"></input>
                                     </div>
                                     <div className="input-block register-space">
                                         <label>Email</label>
-                                        <input value=""></input>
+                                        <input value="" type="text"></input>
                                     </div>
                                     <div className="input-group register-space">
                                         <div className="input-block">
                                             <label>Senha</label>
-                                            <input value=""></input>
+                                            <input value="" type="text"></input>
                                         </div>
                                         <div className="input-block">
                                             <label>Corfirme a senha</label>
-                                            <input value=""></input>
+                                            <input value="" type="text"></input>
                                         </div>
                                     </div>
-                                    <div className="input-block">
-                                        <input type="radio" name="user_type" value="personal"/>Personal
-                                        <input type="radio" name="user_type" value="student"/>Aluno
-                                    </div>
-                                    <button className="register-space" type="submit">
+                                    <fieldset>
+                                        <legend>Tipo de Usuario</legend>
+                                        <div className="input-group register-space">
+                                            <div className="input-radio">
+                                                <input type="radio" name="user_type" value="personal"/>
+                                                <span>Personal</span> 
+                                            </div>
+                                            <div className="input-radio">
+                                                <input type="radio" name="user_type" value="student"/>
+                                                <span>Aluno</span> 
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                    <button type="submit">
                                         Enviar
                                     </button>
                                 </form>
                             </div>
                         </div>
                     </section>
+                </div>
+                <div class="info">
+                    <h3>
+                        Um Titulo
+                    </h3>
+                    <p>
+                        Xabalabala deregui jhonson skibidi relampalejendo tinarossauro aligenigena vridu tauba e sei que la e eh isso msm 
+                    </p>
                 </div>
             </main>
         </>

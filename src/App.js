@@ -3,6 +3,7 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import { faUser, faDumbbell, faInfo, faRunning } from '@fortawesome/free-solid-svg-icons'
 import Header from './components/HeaderComponent';
+import Footer from './components/FooterComponent';
 import Login from './components/LoginComponent';
 
 import './global.css'
@@ -14,6 +15,7 @@ function App() {
     <>
       <Header/>
       <Login/>
+      <Footer/>
     </>
   );
 }

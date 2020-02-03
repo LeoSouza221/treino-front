@@ -9,7 +9,8 @@ main {
 
 main .background-image {
     position: absolute;
-    width: 35%;
+    right: 0;
+    width: 60%;
     height: 100vh;
     display: flex;
     justify-content: start;
@@ -20,7 +21,7 @@ main .background-image {
 main .background-image .main-image {
     height: 100%;
     width: 100%;
-    clip-path: polygon(0 0, 100% 0, 65% 100%, 0 100%);
+    clip-path: polygon(12% 0, 100% 0, 100% 100%, 67% 100%);
 }
 
 main .form-content {
@@ -35,12 +36,13 @@ main .form-content {
 
 main .form-content section {
     width: 350px;
-    height: 400px;
+    height: 450px;
     background-color: white;
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     border-radius: 5px;
     display: grid;
-    grid-template-rows: 50px 350px;
+    grid-template-rows: 50px 400px;
+    overflow: hidden;
 }
 
 section .form-options ul {
@@ -60,11 +62,23 @@ section .form-options ul li {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all 0.5s ease-in;
 }
 
-.form-options ul li:first-child {
+.form-options ul li:target {
     box-shadow: inset -5px -5px 10px rgba(153, 153, 153, 0.23);
     border-radius: 5px 0 0 0;
+}
+
+@keyframes teste {
+    from {
+        box-shadow: none;
+        border-radius: none;
+    }
+    to {
+        box-shadow: inset -5px -5px 10px rgba(153, 153, 153, 0.23);
+        border-radius: 5px 0 0 0;
+    }
 }
 
 .form-options ul li a {
@@ -81,36 +95,30 @@ section .form-options ul li {
 }
 
 .form-infos #login-form {
-    width: calc(100% - 20px);
+    width: calc(100% - 40px);
     height: calc(100% - 20px);
-    margin: 10px;
-    display: block;
+    margin: 10px 20px;
     position: absolute;
     transition: all .65s ease-out;
 }
 
 .form-infos #register-form {
-    width: calc(100% - 20px);
+    width: calc(100% - 40px);
     height: calc(100% - 20px);
-    margin: 10px;
+    margin: 10px 20px;
     display: none;
     position: absolute;
     transition: all .65s ease-out;
 }
 
-.form-infos #register-form:target {
-    display: block;
-    z-index: 0;
-    animation: toRight 0.5s ease-out forwards;;
+.form-infos input[type="text"] {
+    padding: 0 10px;
 }
 
-@keyframes toRight {
-    from {
-        transform: translateX(100%);
-    }
-    to {
-        transform: translateX(0);
-    }
+.form-infos #register-form:target {
+    display: block;
+    z-index: 1;
+    animation: toLeft 0.5s ease-out forwards;
 }
 
 .form-infos #login-form:target #register-form {
@@ -123,15 +131,19 @@ section .form-options ul li {
     animation: toLeft 0.5s ease-out forwards;
 }
 
-.form-infos #login-form:not(:target) {
-    display: none
+.form-infos #register-form:target + #login-form {
+    display: none;
+    opacity: 0;
+    z-index: -111;
 }
 
 @keyframes toLeft {
     from {
+        opacity: 0;
         transform: translateX(-100%);
     }
     to {
+        opacity: 1;
         transform: translateX(0);
     }
 }
@@ -149,9 +161,9 @@ form .input-block label{
     color: rgb(133, 133, 133);
 }
 
-form .input-block input{
+form .input-block input {
     margin-top: 5px;
-    width: 100%;
+    width: calc(100% - 20px);
     height: 32px;
     border-radius: 50px;
     transition: all 0.6s ease-in;
@@ -160,13 +172,9 @@ form .input-block input{
 
 form .input-block input:focus {
     margin-top: 5px;
-    width: 100%;
     height: 32px;
     border-radius: 50px;
     border: 2px solid rgb(239, 180, 65);
-}
-
-form .input-block input[value] {
 }
 
 form .input-group {
@@ -175,10 +183,25 @@ form .input-group {
     grid-gap: 15px;
 }
 
+form fieldset {
+    border: none;
+    width: 100%;
+    height: 80px;
+    color: rgb(133, 133, 133);
+}
+
+.input-radio input {
+    margin-top: 5px;
+}
+
+.input-radio span {
+    margin-left: 5px;
+}
+
 .form-infos button {
     position: absolute;
-    bottom: 25px;
     left: 50%;
+    bottom: 20px;
     transform: translateX(-50%);
     width: 100px;
     height: 40px;
@@ -192,4 +215,18 @@ form .input-group {
 form button:hover {
     background-color: rgb(240, 196, 108);
     box-shadow: -1px 0 5px rgb(43, 43, 43);
+}
+
+main .info {
+    width: 300px;
+    height: 150px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 200px;
+    margin: 0;
+}
+
+main .info p {
+   margin-top: 10px;
 }

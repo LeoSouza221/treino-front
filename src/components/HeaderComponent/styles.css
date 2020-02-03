@@ -52,9 +52,7 @@
     color: white;
     left: -120px;
     top: 49px;
-    box-shadow: 
-        1px 1px 2px rgb(231, 230, 230),
-        1px 0 2px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     border-radius: 3px;
     list-style: none;
     display: none;
