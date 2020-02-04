@@ -4,7 +4,7 @@ import { fab } from '@fortawesome/free-brands-svg-icons'
 import { faUser, faDumbbell, faInfo, faRunning } from '@fortawesome/free-solid-svg-icons'
 import Header from './components/HeaderComponent';
 import Footer from './components/FooterComponent';
-import Login from './components/LoginComponent';
+import Background from './components/BackgroundComponent';
 
 import './global.css'
 
@@ -13,8 +13,8 @@ function App() {
 
   return (
     <>
-      <Header/>
-      <Login/>
+      <Header login={false}/>
+      <Background/>
       <Footer/>
     </>
   );

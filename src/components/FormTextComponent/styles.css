@@ -1,0 +1,28 @@
+.input-block {
+    width: 100%;
+}
+
+.input-block label {
+    display: block;
+    color: rgb(133, 133, 133);
+}
+
+.input-block input {
+    margin-top: 5px;
+    width: calc(100% - 20px);
+    height: 32px;
+    border-radius: 50px;
+    transition: all 0.6s ease-in;
+    border: 2px solid rgb(240, 211, 152);
+}
+
+.input-block input:focus {
+    margin-top: 5px;
+    height: 32px;
+    border-radius: 50px;
+    border: 2px solid rgb(239, 180, 65);
+}
+
+.form-infos input:not([type="radio"]) {
+    padding: 0 10px;
+}

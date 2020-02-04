@@ -1,0 +1,52 @@
+main {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    z-index: 0;
+    background-color: rgb(239, 180, 65);
+    overflow: hidden;
+}
+
+main .background-image {
+    position: absolute;
+    right: 0;
+    width: 60%;
+    height: 100vh;
+    display: flex;
+    justify-content: start;
+    align-items: flex-end;
+    z-index: -1;
+    opacity: 0;
+    animation: rightSlide 0.5s ease-in-out forwards;
+    animation-delay: 1s;
+}
+
+@keyframes rightSlide {
+    from {
+        transform: translateX(50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+main .background-image .main-image {
+    height: 100%;
+    width: 100%;
+    clip-path: polygon(12% 0, 100% 0, 100% 100%, 67% 100%);
+}
+
+main .info {
+    width: 300px;
+    height: 150px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 200px;
+    margin: 0;
+}
+
+main .info p {
+   margin-top: 10px;
+}
