@@ -8,8 +8,8 @@ function Tabs(props) {
     
     return(
         <div className="tab-buttons">
-            {buttons.map(button =>{
-            return <button key={button} className={button === activeTab? 'active': ''} onClick={() => changeTab(button)}>{button}</button>
+            {buttons.map(button => {
+                return <button key={button} className={button === activeTab? 'active': ''} onClick={() => changeTab(button)}>{button}</button>
             })}
         </div>
     )

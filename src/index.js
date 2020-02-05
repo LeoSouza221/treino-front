@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import App from './App';
 import Perfil from './components/PerfilComponent';
 import Treino from './components/TreinoComponent';
 import Alunos from './components/AlunosComponent';
@@ -10,8 +9,7 @@ import Main from './components/MainComponent';
 ReactDOM.render(
     <BrowserRouter>
         <Switch>
-            <Route path="/" exact={true} component={App} />
-            <Route path="/login" component={Main} />
+            <Route path="/" exact={true} component={Main} />
             <Route path="/treino/:id" component={Treino} />
             <Route path="/perfil/:id" component={Perfil} />
             <Route path="/alunos/:id" component={Alunos} />

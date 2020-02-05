@@ -1,0 +1,12 @@
+.slide {
+    animation: toLeft .5s ease-out;
+}
+
+@keyframes toLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}

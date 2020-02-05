@@ -1,9 +1,9 @@
 import React from 'react'
 import './styles.css'
 
-import Main from '../MainComponent';
-
-function Background() {
+function Background(props) {
+    const items = props.children || [];
+    
     return (
         <main>
             <div className="background-image">
@@ -14,15 +14,9 @@ function Background() {
                 >
                 </img>
             </div>
-            <Main/>
-            <div className="info">
-                <h3>
-                    Um Titulo
-                </h3>
-                <p>
-                    Xabalabala deregui jhonson skibidi relampalejendo tinarossauro aligenigena vridu tauba e sei que la e eh isso msm 
-                </p>
-            </div>
+            {items.map((content, index) => {
+                return <div key={index} className="container">{content}</div>
+            })}
         </main>
     ); 
 }

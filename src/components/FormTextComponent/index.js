@@ -8,7 +8,7 @@ function FormText(props) {
     return(
         <div className="input-block">
             <label>{labelName}</label>
-            <input value="" type={type}></input>
+            <input defaultValue="" type={type}></input>
         </div>
     );
 }
