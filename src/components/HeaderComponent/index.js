@@ -4,7 +4,6 @@ import './styles.css'
 
 function Header(props) {
     const isLogged = props.login;
-    console.log(isLogged)
 
     return (
         <header className="main-header">
